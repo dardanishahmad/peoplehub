@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>PeopleHub | Employee Self-Service</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a href="#" class="brand" data-page="Dashboard">
+        <span class="brand-icon"><i data-lucide="layers"></i></span>
+        <span>people<span class="brand-accent">hub</span></span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <nav id="main-nav">
+        <button class="nav-item active" data-page="Dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</button>
+        <button class="nav-item" data-page="Attendance"><i data-lucide="clock-3"></i> Attendance</button>
+        <button class="nav-item" data-page="Leaves"><i data-lucide="calendar-days"></i> Leaves</button>
+        <button class="nav-item" data-page="My Team"><i data-lucide="users"></i> My Team</button>
+      </nav>
+
+      <div class="workspace-label extra-label">MY WORK</div>
+      <nav id="work-nav">
+        <button class="nav-item" data-page="Time"><i data-lucide="timer"></i> Time</button>
+        <button class="nav-item" data-page="Finances"><i data-lucide="wallet"></i> Finances</button>
+        <button class="nav-item" data-page="Performance"><i data-lucide="trending-up"></i> Performance</button>
+        <button class="nav-item" data-page="Documents"><i data-lucide="folder-open"></i> Documents</button>
+        <button class="nav-item" data-page="Assets"><i data-lucide="laptop"></i> Assets</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-box">
+          <div class="help-icon"><i data-lucide="life-buoy"></i></div>
+          <strong>Need help?</strong>
+          <p>We're here to help you.</p>
+          <button class="btn btn-light btn-small" data-action="help">Contact support</button>
+        </div>
+        <div class="profile-mini">
+          <div class="avatar avatar-blue">AS</div>
+          <div class="profile-info">
+            <strong>Alex Smith</strong>
+            <span>Product Designer</span>
+          </div>
+          <button class="icon-btn" title="Profile" data-action="profile"><i data-lucide="more-horizontal"></i></button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menu-toggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+        <div class="breadcrumb"><span>Workspace</span><i data-lucide="chevron-right"></i><strong id="breadcrumb-title">Dashboard</strong></div>
+        <div class="topbar-right">
+          <label class="global-search">
+            <i data-lucide="search"></i>
+            <input id="global-search" type="search" placeholder="Search colleagues..." autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-btn notification-btn" data-action="notifications" title="Notifications">
+            <i data-lucide="bell"></i><span class="notification-dot"></span>
+          </button>
+          <button class="top-profile" data-action="profile">
+            <span class="avatar avatar-blue">AS</span>
+            <span class="top-profile-name">Alex Smith</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <section id="page-content" class="content">
+        <div class="loading">Loading your workspace...</div>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 PeopleHub · Employee Self-Service</span>
+        <span><span class="status-dot"></span> Demo environment</span>
+      </footer>
+    </main>
+  </div>
+
+<div id="modal-root"></div>
+<div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>
